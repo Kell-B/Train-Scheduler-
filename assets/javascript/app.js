@@ -25,3 +25,15 @@ function currentTime() {
 	$('#currentTime').html(current);
 	setTimeout(currentTime, 1000);
 }
+
+$('.form-field').on('click', function() {
+	var trainTemp = $('#train-name').val().trim();
+	var cityTemp = $('#destination').val().trim();
+	var timeTemp = $('#first-train').val().trim();
+	var freqTemp = $('#frequency').val().trim();
+
+	sessionStorage.setItem('train', trainTemp);
+	sessionStorage.setItem('city', cityTemp);
+	sessionStorage.setItem('time', timeTemp);
+	sessionStorage.setItem('freq', freqTemp);
+});
