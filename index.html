@@ -7,14 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script> -->
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
 
     <title>Train Schedule</title>
@@ -25,8 +30,11 @@
     <div class="container">
         <div class="jumbotron">
           <h1 class="text-center" id="heading">UT Hyper Train</h1>
-          <p class="pull-right" id="currentTime"></p>
+          
         </div>
+
+        <div><p id="currentTime"></p></div>
+
     <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12">
@@ -43,7 +51,6 @@
                       <th class="text-center">Frequency</th>
                       <th class="text-center">Next Arrival</th>
                       <th class="text-center">Minutes Away</th>
-                      <th class="text-center">Remove</th>
                     </tr>
                   </thead>
                   <tbody id="train-table-rows">
@@ -93,12 +100,27 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
-    <script src="assets/javascript/app.js"></script>
+
+    
+
+    <script>
+    const firebaseConfig = {
+	apiKey            : 'AIzaSyB5oNsQ7FmhG_23Qw27Z4WSJdjh-7BbUFY',
+	authDomain        : 'kell-b.firebaseapp.com',
+	databaseURL       : 'https://kell-b.firebaseio.com',
+	projectId         : 'kell-b',
+	storageBucket     : 'kell-b.appspot.com',
+	messagingSenderId : '240187413865',
+	appId             : '1:240187413865:web:a0cd8bd2ba1420c60c19f8',
+	measurementId     : 'G-RCE79R6NCD'
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+    </script>
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
   </body>
 </html>
 

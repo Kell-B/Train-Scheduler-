@@ -1,0 +1,12 @@
+body {
+	background-color: beige;
+}
+
+.jumbotron {
+	background-color: cadetblue;
+}
+
+#currentTime {
+	background-color: darkblue;
+	color: white;
+}
