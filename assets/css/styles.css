@@ -1,12 +1,18 @@
 body {
-	background-color: beige;
+	background-color: #d7dae5;
+}
+
+h1 {
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .jumbotron {
-	background-color: cadetblue;
+	background-color: #a6d8d4;
 }
 
 #currentTime {
-	background-color: darkblue;
+	background-color: #8eaf9d;
 	color: white;
+	text-align: center;
 }

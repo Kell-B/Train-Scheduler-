@@ -81,7 +81,7 @@ $(document).ready(function() {
 		var timeRemain = timeDiff % childSnapshot.val().frequency;
 		var minToArrival = childSnapshot.val().frequency - timeRemain;
 		var nextTrain = moment().add(minToArrival, 'minutes');
-		var key = childSnapshot.key;
+		// var key = childSnapshot.key;
 
 		var newrow = $('<tr>');
 		newrow.append($('<td>' + childSnapshot.val().trainName + '</td>'));
